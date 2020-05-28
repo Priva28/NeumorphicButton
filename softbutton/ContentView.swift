@@ -33,17 +33,23 @@ struct ContentView: View {
             .edgesIgnoringSafeArea(.all)
         .overlay(
             VStack {
-                Spacer()
                 Text("Soft Buttons")
                     .font(.largeTitle)
                     .bold()
                     .shadow(radius: 10)
                 Group {
                     Toggle("", isOn: $isOn)
-                        .toggleStyle(SoftToggle(width: 70))
+                        .toggleStyle(SoftSwitch(width: 70))
                         .padding(20)
-                    SoftToggleButton(text: "idk", cornerRadius: 20)
-                        .frame(width: 100, height: 100)
+                    
+                    HStack(spacing: 20) {
+                        SoftToggleButton(text: "1", cornerRadius: 33)
+                            .frame(width: 80, height: 80)
+                        SoftToggleButton(text: "2", cornerRadius: 33)
+                            .frame(width: 80, height: 80)
+                        SoftToggleButton(text: "3", cornerRadius: 33)
+                            .frame(width: 80, height: 80)
+                    }
                     
                     Button(action: {
                         print("gfdg")

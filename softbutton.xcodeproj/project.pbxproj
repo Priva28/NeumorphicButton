@@ -15,7 +15,9 @@
 		301B3E132405C71000C53FB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301B3E112405C71000C53FB2 /* LaunchScreen.storyboard */; };
 		301B3E1E2405C71000C53FB2 /* softbuttonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B3E1D2405C71000C53FB2 /* softbuttonTests.swift */; };
 		301B3E292405C71000C53FB2 /* softbuttonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B3E282405C71000C53FB2 /* softbuttonUITests.swift */; };
-		30336209247E94FE00458CEF /* TouchDownExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30336208247E94FE00458CEF /* TouchDownExtension.swift */; };
+		3033620B247F28B300458CEF /* SoftSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033620A247F28B300458CEF /* SoftSwitch.swift */; };
+		3033620D247F28F300458CEF /* SoftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033620C247F28F300458CEF /* SoftButton.swift */; };
+		3033620F247F340A00458CEF /* TouchDownGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3033620E247F340A00458CEF /* TouchDownGesture.swift */; };
 		30E53DEB24063414006295F4 /* SoftToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E53DEA24063414006295F4 /* SoftToggleButton.swift */; };
 		30E53DED24063E72006295F4 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E53DEC24063E72006295F4 /* AudioPlayer.swift */; };
 		30E53DF124063FB0006295F4 /* clickin-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30E53DEF24063FB0006295F4 /* clickin-1.wav */; };
@@ -55,7 +57,10 @@
 		301B3E242405C71000C53FB2 /* softbuttonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = softbuttonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		301B3E282405C71000C53FB2 /* softbuttonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = softbuttonUITests.swift; sourceTree = "<group>"; };
 		301B3E2A2405C71000C53FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30336208247E94FE00458CEF /* TouchDownExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchDownExtension.swift; sourceTree = "<group>"; };
+		3033620A247F28B300458CEF /* SoftSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftSwitch.swift; sourceTree = "<group>"; };
+		3033620C247F28F300458CEF /* SoftButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftButton.swift; sourceTree = "<group>"; };
+		3033620E247F340A00458CEF /* TouchDownGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchDownGesture.swift; sourceTree = "<group>"; };
+		30336210247F376800458CEF /* clickin-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "clickin-2.wav"; sourceTree = "<group>"; };
 		30E53DEA24063414006295F4 /* SoftToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftToggleButton.swift; sourceTree = "<group>"; };
 		30E53DEC24063E72006295F4 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		30E53DEF24063FB0006295F4 /* clickin-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "clickin-1.wav"; sourceTree = "<group>"; };
@@ -113,13 +118,16 @@
 			children = (
 				30E53DEF24063FB0006295F4 /* clickin-1.wav */,
 				30E53DF32406420A006295F4 /* clickout-1.wav */,
+				30336210247F376800458CEF /* clickin-2.wav */,
 				30E53DF22406420A006295F4 /* clickout-2.wav */,
 				301B3E062405C70B00C53FB2 /* AppDelegate.swift */,
 				301B3E082405C70B00C53FB2 /* SceneDelegate.swift */,
 				301B3E0A2405C70B00C53FB2 /* ContentView.swift */,
 				30E53DEC24063E72006295F4 /* AudioPlayer.swift */,
 				30E53DEA24063414006295F4 /* SoftToggleButton.swift */,
-				30336208247E94FE00458CEF /* TouchDownExtension.swift */,
+				3033620E247F340A00458CEF /* TouchDownGesture.swift */,
+				3033620C247F28F300458CEF /* SoftButton.swift */,
+				3033620A247F28B300458CEF /* SoftSwitch.swift */,
 				301B3E0C2405C71000C53FB2 /* Assets.xcassets */,
 				301B3E112405C71000C53FB2 /* LaunchScreen.storyboard */,
 				301B3E142405C71000C53FB2 /* Info.plist */,
@@ -289,11 +297,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E53DEB24063414006295F4 /* SoftToggleButton.swift in Sources */,
-				30336209247E94FE00458CEF /* TouchDownExtension.swift in Sources */,
 				301B3E072405C70B00C53FB2 /* AppDelegate.swift in Sources */,
+				3033620D247F28F300458CEF /* SoftButton.swift in Sources */,
+				3033620F247F340A00458CEF /* TouchDownGesture.swift in Sources */,
 				301B3E092405C70B00C53FB2 /* SceneDelegate.swift in Sources */,
 				301B3E0B2405C70B00C53FB2 /* ContentView.swift in Sources */,
 				30E53DED24063E72006295F4 /* AudioPlayer.swift in Sources */,
+				3033620B247F28B300458CEF /* SoftSwitch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
